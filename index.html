@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             background-color: #ffd1dc;
             text-align: center;
+            position: relative; /* Needed for absolute positioning of images */
         }
         header {
             background-color: #ff69b4;
@@ -21,7 +22,7 @@
             z-index: 1000;
         }
         header a {
-            color: white;
+            color: #ff1493;
             text-decoration: none;
             font-size: 18px;
             margin: 0 20px;
@@ -42,6 +43,56 @@
             color: #888;
             font-size: 14px;
         }
+        /* Positioning images in a collage around the text */
+        .collage-container {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 80%;
+        }
+        .collage-container img {
+            position: absolute;
+            border-radius: 15px;
+            opacity: 0.8;
+        }
+        .image1 {
+            top: 5%;
+            left: 5%;
+            width: 200px;
+            height: 200px;
+        }
+        .image2 {
+            top: 5%;
+            right: 5%;
+            width: 180px;
+            height: 180px;
+        }
+        .image3 {
+            bottom: 10%;
+            left: 10%;
+            width: 220px;
+            height: 220px;
+        }
+        .image4 {
+            bottom: 5%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+        }
+        .image5 {
+            top: 35%;
+            left: 35%;
+            width: 150px;
+            height: 150px;
+        }
+        .image6 {
+            top: 50%;
+            right: 25%;
+            width: 150px;
+            height: 150px;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +103,16 @@
         <a href="diya.html">Diya</a>
         <a href="sherin.html">Sherin</a>
     </header>
+
+    <!-- Collage Container -->
+    <div class="collage-container">
+        <img src="images/spu1.jpg" alt="Image 1" class="image1">
+        <img src="images/spu2.jpg" alt="Image 2" class="image2">
+        <img src="images/spu3.jpg" alt="Image 3" class="image3">
+        <img src="images/spu4.jpg" alt="Image 4" class="image4">
+        <img src="images/spu0.jpg" alt="Image 5" class="image5">
+        <img src="images/spu5.jpg" alt="Image 6" class="image6">
+    </div>
 
     <!-- Main Content -->
     <main>
